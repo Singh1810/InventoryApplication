@@ -1,0 +1,12 @@
+<% layout('./layout') -%>
+<section
+  class="secion_cat_item"
+>
+  <h2 class="h2_cat_item">
+    <%= title %> <% if (typeof category !== 'undefined') { %> <%-
+    partial('partials/edit_delete_svg', {editLink: category.url + '/update',
+    delLink: category.url + '/delete', title: 'Category', items: items}) %> <% }
+    %>
+  </h2>
+  <%- partial('partials/show_items', { items: items }) %>
+</section>
